@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
+import AlertComponent from "./Alert";
 
 function Formulario() {
   const [colaborador, setColaborador] = useState({
@@ -12,7 +13,8 @@ function Formulario() {
     telefono: ''
   });
 
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const validarCampos = (e) => {
     e.preventDefault()
@@ -24,11 +26,13 @@ function Formulario() {
       !colaborador.cargo ||
       !colaborador.telefono
     ){
-      setError('Todos los campos son obligatorios')
+      setError("Todos los campos son obligatorios")
+      setSuccess("")
       return
     }
 
-    console.log(`Form Submited ${colaborador}`)
+    setError("")
+      setSuccess("Colaborador agregado exitosamente")
     
     setColaborador({
       nombre: '',
@@ -87,6 +91,8 @@ function Formulario() {
           Submit
         </Button>
       </Form>
+
+      <AlertComponent error={error} success={success}/>
     </Container>
   );
 }

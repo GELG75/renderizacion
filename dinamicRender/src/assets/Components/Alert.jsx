@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import React from "react";
+import Alert from "react-bootstrap/Alert";
 
-
-function Alert() {
+function AlertComponent({ error, success }) {
   return (
-    <>
-      
-    </>
-  )
+    <div>
+      {error && <Alert variant="danger">{error}</Alert>}
+      {success && <Alert variant="success">{success}</Alert>}
+    </div>
+  );
 }
 
-export default Alert
+export default AlertComponent;
