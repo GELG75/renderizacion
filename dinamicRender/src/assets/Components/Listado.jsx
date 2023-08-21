@@ -1,9 +1,13 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table'
 import BaseColaboradores from '../lista.js'
+import Title from './Title/Title.jsx';
+import Buscador from './Buscador.jsx';
 function Listado() {
   return (
     <>
+      <Title/>
+      <Buscador/>
       <Table striped bordered hover size="sm">
       <thead>
         <tr>

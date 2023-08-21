@@ -1,10 +1,23 @@
 import { useState } from 'react'
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 
 function Buscador() {
   return (
     <>
       
+      <Form  className="d-flex mt-5 mb-5">
+            <Form.Control
+              type="search"
+              placeholder="Buscar un Colaborador"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Buscar</Button>
+          </Form>
     </>
   )
 }
