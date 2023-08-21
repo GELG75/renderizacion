@@ -1,4 +1,4 @@
-const BaseColaboradores = [
+ export const BaseColaboradores = [
     {
     id: "1",
     nombre: "Juan Soto",
@@ -25,4 +25,3 @@ const BaseColaboradores = [
     },
 ]
 
-export default BaseColaboradores

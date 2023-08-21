@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import AlertComponent from "./Alert";
 
-function Formulario() {
+function Formulario({onSubmit}) {
   const [colaborador, setColaborador] = useState({
     nombre: '',
     email: '',
@@ -34,6 +34,7 @@ function Formulario() {
     setError("")
       setSuccess("Colaborador agregado exitosamente")
     
+    onSubmit(colaborador)
     setColaborador({
       nombre: '',
       email: '',
